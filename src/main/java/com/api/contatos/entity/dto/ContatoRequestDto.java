@@ -1,58 +1,24 @@
-package com.api.contatos.models;
+package com.api.contatos.entity.dto;
 
-import jakarta.persistence.*;
-
-import java.io.Serializable;
 import java.util.UUID;
 
-@Entity
-@Table(name = "CONTATO")
-public class ContatoModel implements Serializable {
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+public class ContatoRequestDto {
 
-    @Column(nullable = false)
     private UUID idCliente;
-
-    @Column(nullable = false)
     private UUID idFuncionario;
-
-    @Column(nullable = false)
     private UUID idFornecedor;
-
-    @Column(nullable = false)
     private String contato;
+    private Integer status;
 
-    @Column(nullable = false, columnDefinition = "int default 1")
-    private int status;
+    public ContatoRequestDto() {
+    }
 
-    public ContatoModel(
-            UUID id,
-            UUID idCliente,
-            UUID idFuncionario,
-            UUID idFornecedor,
-            String contato,
-            int status
-    ){
-        this.id = id;
+    public ContatoRequestDto(UUID idCliente, UUID idFuncionario, UUID idFornecedor, String contato, Integer status) {
         this.idCliente = idCliente;
         this.idFuncionario = idFuncionario;
         this.idFornecedor = idFornecedor;
         this.contato = contato;
         this.status = status;
-    }
-
-    public ContatoModel() {
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 
     public UUID getIdCliente() {
@@ -87,11 +53,11 @@ public class ContatoModel implements Serializable {
         this.contato = contato;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 }
