@@ -1,13 +1,24 @@
 package com.api.contatos.entity.dto;
 
+
+
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.media.Schema;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import java.util.UUID;
 
 public class ContatoRequestDto {
 
+    @Schema(description = "Id de um cliente", type = "string" ,example= "094dec93-cfb3-408f-af83-60050d4e40f6")
     private UUID idCliente;
+    @Schema(description = "Id de um funcionário",example = "")
     private UUID idFuncionario;
+    @Schema(description = "Id de um fornecedor", example = "")
     private UUID idFornecedor;
+    @Schema(description = "Número ou outro tipo de contato", example = "71980028922")
     private String contato;
+    @Schema(description = "Status atual", example = "1")
     private Integer status;
 
     public UUID getIdCliente() {
