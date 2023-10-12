@@ -37,7 +37,6 @@ public class ContatoService {
         }
         if (contatoRepository.existsByContato(novoContatoRequestDto.getContato())){
             BaseErrorDto erroConflito = new BaseErrorDto("contato", ErrosConstants.CADASTRO_EXISTENTE);
-            //return new ResponseErrorBuilder(HttpStatus.CONFLICT);
              return new ResponseEntity<BaseErrorDto>(erroConflito,HttpStatus.CONFLICT);
         }
         ContatoModel novoContato = new ContatoModelTransform().transformarContato(novoContatoRequestDto);
