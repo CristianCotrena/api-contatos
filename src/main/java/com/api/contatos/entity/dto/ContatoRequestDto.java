@@ -10,17 +10,6 @@ public class ContatoRequestDto {
     private String contato;
     private Integer status;
 
-    public ContatoRequestDto() {
-    }
-
-    public ContatoRequestDto(UUID idCliente, UUID idFuncionario, UUID idFornecedor, String contato, Integer status) {
-        this.idCliente = idCliente;
-        this.idFuncionario = idFuncionario;
-        this.idFornecedor = idFornecedor;
-        this.contato = contato;
-        this.status = status;
-    }
-
     public UUID getIdCliente() {
         return idCliente;
     }

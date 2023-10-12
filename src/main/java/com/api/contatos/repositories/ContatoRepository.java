@@ -8,4 +8,5 @@ import java.util.UUID;
 
 @Repository
 public interface ContatoRepository extends JpaRepository<ContatoModel, UUID> {
+    boolean existsByContato(String contato);
 }
