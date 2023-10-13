@@ -1,4 +1,4 @@
-package com.api.contatos.models;
+package com.api.contatos.entity.models;
 
 import jakarta.persistence.*;
 
@@ -13,20 +13,20 @@ public class ContatoModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(nullable = false)
+    @Column
     private UUID idCliente;
 
-    @Column(nullable = false)
+    @Column
     private UUID idFuncionario;
 
-    @Column(nullable = false)
+    @Column
     private UUID idFornecedor;
 
     @Column(nullable = false)
     private String contato;
 
     @Column(nullable = false, columnDefinition = "int default 1")
-    private int status;
+    private Integer status;
 
     public ContatoModel(
             UUID id,

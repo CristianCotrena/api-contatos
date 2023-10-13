@@ -92,10 +92,23 @@ A API faz parte de um sistema de academia com as seguintes funcionalidades:
 ---
 
 ### Etapa 3:
-✅ A ser implementado...
+✅ ~~Padronização de retorno da API~~
 
-✅ A ser implementado...
+✅ ~~Atualizado `environments` com escopo global entre IDEs~~
 
-  
+✅ ~~Adicionado Regras de negócio~~
+
+✅ ~~Configurado e implementado Doc Swagger~~
+
+✅ Para testar as requisições no Swagger entre no link abaixo:
+
+```html
+http://localhost:8080/swagger-ui/index.html#/
+```
+✅ ~~Adicionado coleção inicial do POSTMAN~~
+✅ ~~Implementado método `POST`~
+✅ Implementados Testes Unitários
+
+
 ---
   
